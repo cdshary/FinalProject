@@ -185,7 +185,7 @@
 						
 						<article class="item">
 							<header>
-								<a href="#"><img src="images/6Q.png" alt="" /></a>
+								<a href="#"><img src="images/6Q.PNG" alt="" /></a>
 								<h3>Classification</h3>
 							</header>
 							<p>For this next model, a Random Forest was utilized to determine feature importance. This type provides a strong modeling technique that is better than using a single decision tree.</p>						
@@ -205,10 +205,10 @@
 										</button>
 										</div>
 										<div class="modal-body">
-											<img src="images/6Q.png" width="450" height="300">
+											<img src="images/6Q.PNG" width="450" height="300">
 											<p>For this next model, a Random Forest was utilized to determine feature importance. This type provides a strong modeling technique that is better than using a single decision tree. A con to a decision tree is overfitting which allows the model to learn from the “noise” in the training data which could ultimately have a negative impact on the model’s performance. Since the Random Forest model aggregates a multitude of decision trees, it limits overfitting as well as error due to bias which yielded more useful results. This analysis identified the feature importance (i.e., which of the 54 questions) carried the most weight in predicting outcomes (married or divorced). The six questions below were identified by the Random Forest model as top features in priority order. Our analysis identified a different set of priority features when compared to the top features identified in the Yontem study.</p>
 											<p></p>
-											<img src="images/Cmatrix.png" width="450" height="300">
+											<img src="images/Cmatrix.PNG" width="450" height="300">
 											<p> A confusion matrix analysis was conducted to visualize the performance of the Random Forest model and was determined to have an 89% average f1-score from our train test split data. </p>
 											<img src="images/CDefined.PNG" width="450" height="300"><p></p>
 											<img src="images/SGD_classReport.PNG"><p></p>
@@ -226,7 +226,7 @@
 						</article>
 						<article class="item">
 							<header>
-								<a href="#"><img src="images/KNN1.png" alt="" /></a>
+								<a href="#"><img src="images/KNN1.PNG" alt="" /></a>
 								<h3>KNN, LinearSVC, and SGDClassifier</h3>
 							</header>
 							<p>Similar to the Yontem study, our team analyzed the accuracy of three machine learning models on the augmented data set. The models used were K-Nearest Neighbor (KNN), LinearSVC, and SGDClassifier.</p>
@@ -249,15 +249,15 @@
 										<div class="modal-body">
 										
 											<p>Similar to the Yontem study, our team analyzed the accuracy of three machine learning models on the augmented data set. The models used were K-Nearest Neighbor (KNN), LinearSVC, and SGDClassifier. Each model was run with and without feature selection (using the top six feature importance scores identified in the Random Forest model). The same analysis was run on data from the original study only. </p>
-											<img src="images/KNN1.png" width="450" height="300"><p></P>
+											<img src="images/KNN1.PNG" width="450" height="300"><p></P>
 											<p>Our analysis found the best performing model to be KNN without feature selection on the combined data set, while the Linear SVC was the top performer on the original data set (Turkey only data). Except for KNN, the models achieved better accuracy overall with the original data set. This suggests that cultural differences may be reflected in responses received from friends and family vs. responses from the original data.</p>
 											
 											
-											<p></P><img src="images/KNN.png">
+											<p></P><img src="images/KNN.PNG">
 											<img src="images/KNNUse.PNG"><p></P>
 											<p>The worst performing model was the SGD Classifier with feature selection for both data sets. In all cases, the performance of the models without feature selection was better when compared to the same model run with feature selection. This reflects relatively low feature importance scores from the Random Forest model. Shown below are the classification report and confusion matrix for the best and worst performing models on the combined data set.</p>
 											
-											<img src="images/SGD.png">
+											<img src="images/SGD.PNG">
 											<img src="images/SGD_classReport.PNG"><p></P>
 									
 											<img src="images/SGD_TrueFalse.PNG"><p></P>
