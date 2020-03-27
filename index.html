@@ -7,355 +7,461 @@
 
 
 <html>
-	<head>
-		<title>Divorce_Predictor </title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-		
 
-	</head>
+<head>
+	<title>Divorce_Predictor </title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-	<body>
 
-		<!-- Header -->
-			<header id="header" class="alt">
-				<div class="inner">
-					<h1>Will Your Marriage Beat the Odds?</h1>
-					<p>Divorce Prediction Project Made Possible By Machine Learning </a></p>
-				</div>
-			</header>
+</head>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<body>
 
-				<!-- Banner -->
-					<section id="intro" class="main">
-						<img src="images/AllUs.jpg">
-						<h2>UC Davis Data & Analytics - Final Project</h2>
-						<p>Most Americans are well aware that half of marriages end in divorce.  The good news is that divorce rate in the US is decreasing, however, so is the marriage rate.  According to the Center for Disease Control, the 2018 marriage rate was 6.9 per 1,000 total population while the divorce rate was 2.9 per 1,000 population.  Both rates were decreased by a tenth of a point from the previous year and the year before. It seems fewer couples are willing to gamble the risk these days and opt out of marriage.  With the high risk of divorce, we found the subject of divorce to be a compelling machine learning exercise.  Can divorce be predicted based on specific attributes? </p>
-						<!-- <ul class="actions">
+	<!-- Header -->
+	<header id="header" class="alt">
+		<div class="inner">
+			<h1>Will Your Marriage Beat the Odds?</h1>
+			<p>Divorce Prediction Project Made Possible By Machine Learning </a></p>
+		</div>
+	</header>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Banner -->
+		<section id="intro" class="main">
+			<img id="AllUs" src="images/AllUs.jpg">
+			<h2>UC Davis Data & Analytics - Final Project</h2>
+			<p>Most Americans are well aware that half of marriages end in divorce. The good news is that divorce rate in the
+				US is decreasing, however, so is the marriage rate. According to the Center for Disease Control, the 2018
+				marriage rate was 6.9 per 1,000 total population while the divorce rate was 2.9 per 1,000 population. Both rates
+				were decreased by a tenth of a point from the previous year and the year before. It seems fewer couples are
+				willing to gamble the risk these days and opt out of marriage. With the high risk of divorce, we found the
+				subject of divorce to be a compelling machine learning exercise. Can divorce be predicted based on specific
+				attributes? </p>
+			<!-- <ul class="actions">
 							<li></id><a href="#" id="button1" class="button big">Learn More</a></li>
 						</ul> -->
 
-						<!-- This is the documentation link for this modal -->
-						<!-- https://getbootstrap.com/docs/4.4/components/modal/ -->
-						<!-- Button trigger modal -->
-						<button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModal">
-							Learn More
-						</button>
-						
-						<!-- Modal -->
-						<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-							<div class="modal-dialog" role="document">
+			<!-- This is the documentation link for this modal -->
+			<!-- https://getbootstrap.com/docs/4.4/components/modal/ -->
+			<!-- Button trigger modal -->
+			<button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModal">
+				Learn More
+			</button>
+
+			<!-- Modal -->
+			<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+				aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">UC Davis Data & Analytics - Final Project</h5>
+							<button type="button" class="btn btn-outline-secondary" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<p>Most Americans are well aware that half of marriages end in divorce. The good news is that divorce rate
+								in the US is decreasing, however, so is the marriage rate. According to the Center for Disease Control,
+								the 2018 marriage rate was 6.9 per 1,000 total population while the divorce rate was 2.9 per 1,000
+								population. Both rates were decreased by a tenth of a point from the previous year and the year before.
+								It seems fewer couples are willing to gamble the risk these days and opt out of marriage. With the high
+								risk of divorce, we found the subject of divorce to be a compelling machine learning exercise. Can
+								divorce be predicted based on specific attributes? </p>
+							<p>When looking for datasets around divorce we came across a study done in Turkey, where divorce rates
+								have been increasing and are among the highest of the 33 member countries of the Organization for
+								Economic Cooperation and Development (<a target="_blank"
+									href="https://dergipark.org.tr/tr/download/article-file/748448">Yontem et al</a>). The study used
+								aspects of the Gottman couples therapy model, a model that derives the cause of divorce using empirical
+								research (for more information on the Gottman Method <a target="_blank"
+									href="https://www.gottman.com/about/the-gottman-method/">click here</a>). The study developed a
+								Divorce Predictor Scale (DPS) based on the Gottman model. The DPS was composed of 54 questions exploring
+								the interactions and feelings between couples. The study surveyed both married and divorced couples who
+								answered the 54 questions based on a scale of 0-4, with 0 being strongly-disagree and 4 being
+								strongly-agree. The Yontem study tested the accuracy of three machine learning methods -- Artificial
+								Neural Networks (ANN), Radial-Basis Function Kernel (RFB) and Random Forest -- before and after feature
+								selection. The ANN method combined with correlation based feature selection was identified to be the
+								most accurate model to fit the data.</p>
+
+							<p>In this project, we decided to do a similar analysis using different machine learning methods. In
+								addition, our analysis included an expanded data set, augmented with responses from close family and
+								friends. The survey instrument was created in Google Forms and can be found <a target="_blank"
+									href="https://docs.google.com/forms/d/e/1FAIpQLSfnvxPtGGtEI_Nb1UZRecZ6lBX7Z3pQL5zoWu8fyVhLIgug2A/viewform">here</a>.
+							</p>
+							<p>Our analysis was conducted using the following technologies: python, pandas: matplotlib, plotly,
+								sklearn, seaborn, and numpy. </p>
+
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Items -->
+		<section class="main items">
+			<article class="item">
+				<header>
+					<a href="#"><img src="images/pic01.png" alt="" /></a>
+					<h3>Linear Regression</h3>
+				</header>
+				<p>For the original Turkish dataset, we chose to do Lasso and Ridge linear regressions to reduce model
+					complexity. Ridge puts constraints on the coefficients which in effect, shrinks the coefficient.</p>
+				<ul class="actions">
+					<button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#E1">
+						Learn More
+					</button>
+
+					<!-- Modal -->
+					<div class="modal fade" id="E1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog" role="document">
 							<div class="modal-content">
 								<div class="modal-header">
-								<h5 class="modal-title" id="exampleModalLabel">UC Davis Data & Analytics - Final Project</h5>
-								<button type="button" class="btn btn-outline-secondary" data-dismiss="modal" aria-label="Close">
-									<span aria-hidden="true">&times;</span>
-								</button>
+									<h5 class="modal-title" id="E1">Linear Regression</h5>
+									<button type="button" class="btn btn-outline-secondary" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
 								</div>
 								<div class="modal-body">
-									<p>Most Americans are well aware that half of marriages end in divorce.  The good news is that divorce rate in the US is decreasing, however, so is the marriage rate.  According to the Center for Disease Control, the 2018 marriage rate was 6.9 per 1,000 total population while the divorce rate was 2.9 per 1,000 population.  Both rates were decreased by a tenth of a point from the previous year and the year before. It seems fewer couples are willing to gamble the risk these days and opt out of marriage.  With the high risk of divorce, we found the subject of divorce to be a compelling machine learning exercise.  Can divorce be predicted based on specific attributes? </p>
-									<p>When looking for datasets around divorce we came across a study done in Turkey, where divorce rates have been increasing and are among the highest of the 33 member countries of the Organization for Economic Cooperation and Development (<a href="https://dergipark.org.tr/tr/download/article-file/748448">Yontem et al</a>). The study used aspects of the Gottman couples therapy model, a model that derives the cause of divorce using empirical research (for more information on the Gottman Method <a href="https://www.gottman.com/about/the-gottman-method/">click here</a>).  The study developed a Divorce Predictor Scale (DPS) based on the Gottman model.  The DPS was composed of 54 questions exploring the interactions and feelings between couples.  The study surveyed both married and divorced couples who answered the 54 questions based on a scale of 0-4, with 0 being strongly-disagree and 4 being strongly-agree. The Yontem study tested the accuracy of three machine learning methods -- Artificial Neural Networks (ANN), Radial-Basis Function Kernel (RFB) and Random Forest -- before and after feature selection. The ANN method combined with correlation based feature selection was identified to be the most accurate model to fit the data.</p>
+									<img src="images/pic05.png" width="450" height="400">
+									<p>Residual plot of test and training data sets looked promising.</p>
 
-									<p>In this project, we decided to do a similar analysis using different machine learning methods. In addition, our analysis included an expanded data set, augmented with responses from close family and friends. The survey instrument was created in Google Forms and can be found <a href="https://docs.google.com/forms/d/e/1FAIpQLSfnvxPtGGtEI_Nb1UZRecZ6lBX7Z3pQL5zoWu8fyVhLIgug2A/viewform">here</a>.</p>
-									<p>Our analysis was conducted using the following technologies: python, pandas: matplotlib, plotly, sklearn, seaborn, and numpy. </p>
-									
+									<img src="images/pic01.png" width="450" height="400">
+
 								</div>
 								<div class="modal-footer">
-								<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+									<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
 								</div>
-							</div>
 							</div>
 						</div>
-					</section>
+					</div>
+				</ul>
+			</article>
+			<article class="item">
+				<header>
+					<a href="#"><img src="images/pic02.png" alt="" /></a>
+					<h3>Heatmap</h3>
+				</header>
+				<p>In addition to linear regression, we also used a heatmap to get an overall look into the distribution of each
+					attribute in our dataset. We used seborn to create the heatmap looking at all 54 survey questions and average
+					values.</p>
 
-				<!-- Items -->
-					<section class="main items">
-						<article class="item">
-							<header>
-								<a href="#"><img src="images/pic01.png" alt="" /></a>
-								<h3>Linear Regression</h3>
-							</header>
-							<p>For the original Turkish dataset, we chose to do Lasso and Ridge linear regressions to reduce model complexity. Ridge puts constraints on the coefficients which in effect, shrinks the coefficient.</p>
-							<ul class="actions">
-								<button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#E1">
-									Learn More
-								</button>
-								
-								<!-- Modal -->
-								<div class="modal fade" id="E1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-									<div class="modal-dialog" role="document">
-									<div class="modal-content">
-										<div class="modal-header">
-										<h5 class="modal-title" id="E1">Linear Regression</h5>
-										<button type="button" class="btn btn-outline-secondary" data-dismiss="modal" aria-label="Close">
-											<span aria-hidden="true">&times;</span>
-										</button>
-										</div>
-										<div class="modal-body">
-											<img src="images/pic05.png" width="450" height="400">
-											<p>Residual plot of test and training data sets looked promising.</p>
-											
-											<img src="images/pic01.png" width="450" height="400">
-											
-										</div>
-										<div class="modal-footer">
-										<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
-										</div>
-									</div>
-									</div>
-								</div>
-							</ul>
-						</article>
-						<article class="item">
-							<header>
-								<a href="#"><img src="images/pic02.png" alt="" /></a>
-								<h3>Heatmap</h3>
-							</header>
-							<p>In addition to linear regression, we also used a heatmap to get an overall look into the distribution of each attribute in our dataset.  We used seborn to create the heatmap looking at all 54 survey questions and average values.</p>
+				<ul class="actions">
+					<button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#E2">
+						Learn More
+					</button>
 
-							<ul class="actions">
-								<button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#E2">
-									Learn More
-								</button>
-								
-								<!-- Modal -->
-								<div class="modal fade" id="E2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-									<div class="modal-dialog" role="document">
-									<div class="modal-content">
-										<div class="modal-header">
-										<h5 class="modal-title" id="E2">Heatmap</h5>
-										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-											<span aria-hidden="true">&times;</span>
-										</button>
-										</div>
-										<div class="modal-body">
-											<img src="images/pic02.png" width="550" height="400">
-											<p>In addition to linear regression, we also used a heatmap to get an overall look into the distribution of each attribute in our dataset.  We used seborn to create the heatmap looking at all 54 survey questions and average values.</p>
-											<p>The heatmap showed significant attributes of the dataset, specifically some of the more negative survey questions. The heatmap was a great way of looking at the dataset as a whole. It shows how much each feature affects our predictions, with higher numbers (darker colors) having the most effect.</p>
-										</div>
-										<div class="modal-footer">
-										<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
-							
-										</div>
-									</div>
-									</div>
-								</div>
-							</ul>
-						</article>
-
-						<article class="item">
-							<header>
-								<a href="#"><img src="images/pic04.png" alt="" /></a>
-								<h3>Lasso and Ridge</h3>
-							</header>
-							<p>For the original Turkish dataset, we chose to do Lasso and Ridge linear regressions to reduce model complexity. Ridge puts constraints on the coefficients which in effect, shrinks the coefficient.</p>
-							<ul class="actions">
-								<button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#E3">
-									Learn More
-								</button>
-							
-								<!-- Modal -->
-								<div class="modal fade" id="E3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-									<div class="modal-dialog" role="document">
-									<div class="modal-content">
-										<div class="modal-header">
-										<h5 class="modal-title" id="E3">Lasso and Ridge</h5>
-										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-											<span aria-hidden="true">&times;</span>
-										</button>
-										</div>
-										<div class="modal-body">
-											<img src="images/pic04.png" width="450" height="300">
-											<p>For the original Turkish dataset, we chose to do Lasso and Ridge linear regressions to reduce model complexity. Ridge puts constraints on the coefficients which in effect, shrinks the coefficient. Lasso differs from Ridge in that it helps reduce over-fitting by taking into account magnitudes. Both regression methods find the first point where the elliptical hits the region of constraints.  For more information on these analyses click here. When splitting our data into test and training sets, we got an R2 score of 92% indicating that our data is predictable and linear regression is a good fit. Both the Lasso and Ridge analyses yielded R2 scores above 80% and low mean squared error rates below 0.17 indicating our model explains a good amount of the variability around our means.  These statistics suggest that we can produce predictions that are reasonably precise. Our lower MSE indicates we are close to finding the line of best fit for our model. It is no surprise that our R2 value decreased once running the analysis on our dataset as opposed to the training set.</p>
-											<img src="images/pic06.png" width="450" height="300">
-										</div>
-										<div class="modal-footer">
-										<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
-							
-										</div>
-									</div>
-									</div>
-								</div>
-							</ul>
-						</article>
-						
-						<article class="item">
-							<header>
-								<a href="#"><img src="images/6Q.PNG" alt="" /></a>
-								<h3>Classification</h3>
-							</header>
-							<p>For this next model, a Random Forest was utilized to determine feature importance. This type provides a strong modeling technique that is better than using a single decision tree.</p>						
-							
-							<ul class="actions">
-								<button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#E4">
-									Learn More
-								</button>
-							<!-- Modal -->
-								<div class="modal fade" id="E4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-									<div class="modal-dialog" role="document">
-									<div class="modal-content">
-										<div class="modal-header">
-										<h5 class="modal-title" id="E4">Classification</h5>
-										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-											<span aria-hidden="true">&times;</span>
-										</button>
-										</div>
-										<div class="modal-body">
-											<img src="images/6Q.PNG" width="450" height="300">
-											<p>For this next model, a Random Forest was utilized to determine feature importance. This type provides a strong modeling technique that is better than using a single decision tree. A con to a decision tree is overfitting which allows the model to learn from the “noise” in the training data which could ultimately have a negative impact on the model’s performance. Since the Random Forest model aggregates a multitude of decision trees, it limits overfitting as well as error due to bias which yielded more useful results. This analysis identified the feature importance (i.e., which of the 54 questions) carried the most weight in predicting outcomes (married or divorced). The six questions below were identified by the Random Forest model as top features in priority order. Our analysis identified a different set of priority features when compared to the top features identified in the Yontem study.</p>
-											<p></p>
-											<img src="images/Cmatrix.PNG" width="450" height="300">
-											<p> A confusion matrix analysis was conducted to visualize the performance of the Random Forest model and was determined to have an 89% average f1-score from our train test split data. </p>
-											<img src="images/CDefined.PNG" width="450" height="300"><p></p>
-											<img src="images/SGD_classReport.PNG"><p></p>
-											<img src="images/class.PNG" width="450" height="200">
-										</div>
-										<div class="modal-footer">
-										<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
-							
-										</div>
-									</div>
-									</div>
-								</div>
-			
-							</ul>
-						</article>
-						<article class="item">
-							<header>
-								<a href="#"><img src="images/KNN1.PNG" alt="" /></a>
-								<h3>KNN, LinearSVC, and SGDClassifier</h3>
-							</header>
-							<p>Similar to the Yontem study, our team analyzed the accuracy of three machine learning models on the augmented data set. The models used were K-Nearest Neighbor (KNN), LinearSVC, and SGDClassifier.</p>
-
-							<ul class="actions">
-								<button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#E5">
-									Learn More
-								</button>
-								
-								<!-- Modal -->
-								<div class="modal fade" id="E5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-									<div class="modal-dialog" role="document">
-									<div class="modal-content">
-										<div class="modal-header">
-										<h5 class="modal-title" id="E5">KNN, LinearSVC, and SGDClassifier</h5>
-										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-											<span aria-hidden="true">&times;</span>
-										</button>
-										</div>
-										<div class="modal-body">
-										
-											<p>Similar to the Yontem study, our team analyzed the accuracy of three machine learning models on the augmented data set. The models used were K-Nearest Neighbor (KNN), LinearSVC, and SGDClassifier. Each model was run with and without feature selection (using the top six feature importance scores identified in the Random Forest model). The same analysis was run on data from the original study only. </p>
-											<img src="images/KNN1.PNG" width="450" height="300"><p></P>
-											<p>Our analysis found the best performing model to be KNN without feature selection on the combined data set, while the Linear SVC was the top performer on the original data set (Turkey only data). Except for KNN, the models achieved better accuracy overall with the original data set. This suggests that cultural differences may be reflected in responses received from friends and family vs. responses from the original data.</p>
-											
-											
-											<p></P><img src="images/KNN.PNG">
-											<img src="images/KNNUse.PNG"><p></P>
-											<p>The worst performing model was the SGD Classifier with feature selection for both data sets. In all cases, the performance of the models without feature selection was better when compared to the same model run with feature selection. This reflects relatively low feature importance scores from the Random Forest model. Shown below are the classification report and confusion matrix for the best and worst performing models on the combined data set.</p>
-											
-											<img src="images/SGD.PNG">
-											<img src="images/SGD_classReport.PNG"><p></P>
-									
-											<img src="images/SGD_TrueFalse.PNG"><p></P>
-										</div>
-										<div class="modal-footer">
-										<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
-							
-										</div>
-									</div>
-									</div>
-								</div>
-							</ul>
-						</article>
-						<article class="item">
-							<header>
-								<a href="#"><img src="images/I2.png" alt="" /></a>
-								<h3>Statistical Analysis</h3>
-							</header>
-							<p>Our team used numpy and Plotly to create interactive visuals that reflect the responses of the study at an individual level.</p>
-
-							<ul class="actions">
-								<button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#E6">
-									Learn More
-								</button>
-								
-								<!-- Modal -->
-								<div class="modal fade" id="E6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-									<div class="modal-dialog" role="document">
-									<div class="modal-content">
-										<div class="modal-header">
-										<h5 class="modal-title" id="E6">Statistical Analysis</h5>
-										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-											<span aria-hidden="true">&times;</span>
-										</button>
-										</div>
-										<div class="modal-body">
-										
-											<p>Our team used numpy and Plotly to create interactive visuals that reflect the responses of the study at an individual level. In the visual below, we have mapped aggregated responses every response at the individual level barring answers marked as neutral. You will find that the divorced population studied in Turkey have varying answers to all of the questions in the survey while the married population seems to be clustered towards answer specifically agreeable on most questions. However, the data does look supringsly different when we isolate the responses between the two groups for the 6 most important questions as identified by the Yotem study. </p>
-											<img src="PlotlyScatter.html" width="450" height="300"><p></p>
-												<p>With the isolated 6 questions below, there is a stark difference in the agreeable response rate between the married divorced populations. The researchers called out these six questions as being the strongest indicator of a divorce. The divorced population reflected positively on most questions while the married population barely agreed to any of the 6 questions.</p>
-											
-											
-											<p></P><img src="images/Plotly2A.html">
-											
-										</div>
-										<div class="modal-footer">
-										<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
-							
-										</div>
-									</div>
-									</div>
-								</div>
-							</ul>
-						</article>
-					</section>
-
-				<!-- CTA -->
-					<section id="cta" class="main special">
-						<h2>Final Project Presentation</h2>
-						<div class="embed-responsive embed-responsive-11by5"></div>
-						<p>Due to the COVID-19 outbreak, our team of data scientists conducted a pre-recorded final project presentation</p>
-						<p>We regret not being able to present in person but have made the link available to you below for your viewing pleasure.</p>
-					
-						<ul class="actions">
-							<button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#E7">
-								Click here to see the video
-							</button>
-							
-							<!-- Modal -->
-							<div class="modal fade" id="E7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-								<div class="modal-dialog" role="document">
-								<div class="modal-content">
-									<div class="modal-header">
-									<h5 class="modal-title" id="E7">Final Project Presentation</h5>
+					<!-- Modal -->
+					<div class="modal fade" id="E2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="E2">Heatmap</h5>
 									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 										<span aria-hidden="true">&times;</span>
 									</button>
-									</div>
-									<div class="modal-body">
-										<div class="embed-responsive embed-responsive-16by9">
-											<iframe width="560" height="315" src="https://www.youtube.com/embed/QmOFI5qFwwg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-										  </div>
-										
-									</div>
-									<div class="modal-footer">
-									<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
-						
-									</div>
 								</div>
+								<div class="modal-body">
+									<img src="images/pic02.png" width="450" height="350">
+									<p>In addition to linear regression, we also used a heatmap to get an overall look into the
+										distribution of each attribute in our dataset. We used seborn to create the heatmap looking at all
+										54 survey questions and average values.</p>
+									<p>The heatmap showed significant attributes of the dataset, specifically some of the more negative
+										survey questions. The heatmap was a great way of looking at the dataset as a whole. It shows how
+										much each feature affects our predictions, with higher numbers (darker colors) having the most
+										effect.</p>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+
 								</div>
 							</div>
-						</ul>
-						
-						</ul>
-					</section>
+						</div>
+					</div>
+				</ul>
+			</article>
 
-				<!-- Main -->
-				<!--
+			<article class="item">
+				<header>
+					<a href="#"><img src="images/pic04.png" alt="" /></a>
+					<h3>Lasso and Ridge</h3>
+				</header>
+				<p>For the original Turkish dataset, we chose to do Lasso and Ridge linear regressions to reduce model
+					complexity. Ridge puts constraints on the coefficients which in effect, shrinks the coefficient.</p>
+				<ul class="actions">
+					<button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#E3">
+						Learn More
+					</button>
+
+					<!-- Modal -->
+					<div class="modal fade" id="E3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="E3">Lasso and Ridge</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<img src="images/pic04.png" width="450" height="300">
+									<p>For the original Turkish dataset, we chose to do Lasso and Ridge linear regressions to reduce model
+										complexity. Ridge puts constraints on the coefficients which in effect, shrinks the coefficient.
+										Lasso differs from Ridge in that it helps reduce over-fitting by taking into account magnitudes.
+										Both regression methods find the first point where the elliptical hits the region of constraints.
+										For more information on these analyses click here. When splitting our data into test and training
+										sets, we got an R2 score of 92% indicating that our data is predictable and linear regression is a
+										good fit. Both the Lasso and Ridge analyses yielded R2 scores above 80% and low mean squared error
+										rates below 0.17 indicating our model explains a good amount of the variability around our means.
+										These statistics suggest that we can produce predictions that are reasonably precise. Our lower MSE
+										indicates we are close to finding the line of best fit for our model. It is no surprise that our R2
+										value decreased once running the analysis on our dataset as opposed to the training set.</p>
+									<img src="images/pic06.png" width="450" height="300">
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</ul>
+			</article>
+
+			<article class="item">
+				<header>
+					<a href="#"><img src="images/6Q.PNG" alt="" /></a>
+					<h3>Classification</h3>
+				</header>
+				<p>For this next model, a Random Forest was utilized to determine feature importance. This type provides a
+					strong modeling technique that is better than using a single decision tree.</p>
+
+				<ul class="actions">
+					<button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#E4">
+						Learn More
+					</button>
+					<!-- Modal -->
+					<div class="modal fade" id="E4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="E4">Classification</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<img src="images/6Q.PNG" width="450" height="300">
+									<p>For this next model, a Random Forest was utilized to determine feature importance. This type
+										provides a strong modeling technique that is better than using a single decision tree. A con to a
+										decision tree is overfitting which allows the model to learn from the “noise” in the training data
+										which could ultimately have a negative impact on the model’s performance. Since the Random Forest
+										model aggregates a multitude of decision trees, it limits overfitting as well as error due to bias
+										which yielded more useful results. This analysis identified the feature importance (i.e., which of
+										the 54 questions) carried the most weight in predicting outcomes (married or divorced). The six
+										questions below were identified by the Random Forest model as top features in priority order. Our
+										analysis identified a different set of priority features when compared to the top features
+										identified in the Yontem study.</p>
+									<p></p>
+									<img src="images/Cmatrix.PNG" width="450" height="300">
+									<p> A confusion matrix analysis was conducted to visualize the performance of the Random Forest model
+										and was determined to have an 89% average f1-score from our train test split data. </p>
+									<img src="images/CDefined.PNG" width="450" height="300">
+									<p></p>
+									<img src="images/SGD_classReport.PNG">
+									<p></p>
+									<img src="images/class.PNG" width="450" height="200">
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</ul>
+			</article>
+			<article class="item">
+				<header>
+					<a href="#"><img src="images/KNN1.PNG" alt="" /></a>
+					<h3>KNN, LinearSVC, and SGDClassifier</h3>
+				</header>
+				<p>Similar to the Yontem study, our team analyzed the accuracy of three machine learning models on the augmented
+					data set. The models used were K-Nearest Neighbor (KNN), LinearSVC, and SGDClassifier.</p>
+
+				<ul class="actions">
+					<button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#E5">
+						Learn More
+					</button>
+
+					<!-- Modal -->
+					<div class="modal fade" id="E5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="E5">KNN, LinearSVC, and SGDClassifier</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+
+									<p>Similar to the Yontem study, our team analyzed the accuracy of three machine learning models on the
+										augmented data set. The models used were K-Nearest Neighbor (KNN), LinearSVC, and SGDClassifier.
+										Each model was run with and without feature selection (using the top six feature importance scores
+										identified in the Random Forest model). The same analysis was run on data from the original study
+										only. </p>
+									<img src="images/KNN1.PNG" width="450" height="300">
+									<p></P>
+									<p>Our analysis found the best performing model to be KNN without feature selection on the combined
+										data set, while the Linear SVC was the top performer on the original data set (Turkey only data).
+										Except for KNN, the models achieved better accuracy overall with the original data set. This
+										suggests that cultural differences may be reflected in responses received from friends and family
+										vs. responses from the original data.</p>
+
+
+									<p></P><img src="images/KNN.PNG">
+									<img src="images/KNNUse.PNG">
+									<p></P>
+									<p>The worst performing model was the SGD Classifier with feature selection for both data sets. In all
+										cases, the performance of the models without feature selection was better when compared to the same
+										model run with feature selection. This reflects relatively low feature importance scores from the
+										Random Forest model. Shown below are the classification report and confusion matrix for the best and
+										worst performing models on the combined data set.</p>
+
+									<img src="images/SGD.PNG">
+									<img src="images/SGD_classReport.PNG">
+									<p></P>
+
+									<img src="images/SGD_TrueFalse.PNG">
+									<p></P>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</ul>
+			</article>
+			<article class="item">
+				<header>
+					<a href="#"></a><img src="images/I2.png" alt="" /></a>
+					<h3>Statistical Analysis</h3>
+				</header>
+				<p>Our team used numpy and Plotly to create interactive visuals that reflect the responses of the study at an
+					individual level.</p>
+
+				<ul class="actions">
+					<button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#E6">
+						Learn More
+					</button>
+
+					<!-- Modal -->
+					<div class="modal fade" id="E6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="E6">Statistical Analysis</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+
+									<p>Our team used numpy and Plotly to create interactive visuals that reflect the responses of the
+										study at an individual level. In the visual below, we have mapped aggregated responses every
+										response at the individual level barring answers marked as neutral. You will find that the divorced
+										population studied in Turkey have varying answers to all of the questions in the survey while the
+										married population seems to be clustered towards answer specifically agreeable on most questions.
+										However, the data does look supringsly different when we isolate the responses between the two
+										groups for the 6 most important questions as identified by the Yotem study. </p>
+									<a href="PlotlyScatter.html" target="_blank">Link to Plotly interactive</a>
+									<p></p>
+									<p>With the isolated 6 questions below, there is a stark difference in the agreeable response rate
+										between the married divorced populations. The researchers called out these six questions as being
+										the strongest indicator of a divorce. The divorced population reflected positively on most
+										questions
+										while the married population barely agreed to any of the 6 questions.</p>
+
+
+									<p></P>
+									<a href="Plotly2A.html" target="_blank">Link to Plotly interactive 2</a>
+
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</ul>
+			</article>
+		</section>
+
+		<!-- CTA -->
+		<section id="cta" class="main special">
+			<h2>Final Project Presentation</h2>
+			<div class="embed-responsive embed-responsive-11by5"></div>
+			<p>Due to the COVID-19 outbreak, our team of data scientists conducted a pre-recorded final project presentation
+			</p>
+			<p>We regret not being able to present in person but have made the link available to you below for your viewing
+				pleasure.</p>
+
+			<ul class="actions">
+				<button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#E7">
+					Click here to see the video
+				</button>
+
+				<!-- Modal -->
+				<div class="modal fade" id="E7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+					aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="E7">Final Project Presentation</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<div class="embed-responsive embed-responsive-16by9">
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/QmOFI5qFwwg" frameborder="0"
+										allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+										allowfullscreen></iframe>
+								</div>
+
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</ul>
+
+			</ul>
+		</section>
+
+		<!-- Main -->
+		<!--
 					<section id="main" class="main">
 						<header>
 							<h2>Lorem ipsum dolor</h2>
@@ -364,24 +470,31 @@
 					</section>
 				-->
 
-				<!-- Footer -->
-					<footer id="footer">
-						
-						<p class="copyright">&copy; UC Davis, Continuing Education - Data & Analytics 2020</p>
-						<a href="https://github.com/4datawoman/Final_Project">Github.com/4datawoman/Final_Project</a>
-					</footer>
+		<!-- Footer -->
+		<footer id="footer">
 
-			</div>
+			<p class="copyright">&copy; UC Davis, Continuing Education - Data & Analytics 2020</p>
+			<a target="_blank" href="https://github.com/4datawoman/Final_Project">Github.com/4datawoman/Final_Project</a>
+		</footer>
 
-		<!-- Scripts -->
-		<script src="https://d3js.org/d3.v5.min.js"></script>	
-		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/skel.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
+	</div>
 
-	</body>
+	<!-- Scripts -->
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+		crossorigin="anonymous"></script>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
 </html>
