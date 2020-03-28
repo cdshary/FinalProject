@@ -1528,13 +1528,11 @@
 	}
 
 		#footer a {
-			text-align: center;
-                        color: inherit;
+			color: inherit;
 		}
 
 		#footer:before {
 			content: '';
-                        text-align: center;
 			display: inline-block;
 			width: 6em;
 			height: 2px;
@@ -1542,15 +1540,13 @@
 			margin-bottom: 4em;
 		}
 
-		#footer .copyright { 
-                        text-align: center;
+		#footer .copyright {
 			font-size: 0.8em;
 		}
 
 		@media screen and (max-width: 736px) {
 
-			#footer {        
-                                text-align: center;
+			#footer {
 				margin-top: 2em;
 			}
 
